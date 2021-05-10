@@ -1,7 +1,7 @@
 apiVersion: extensions/v1beta1
 kind: Ingress
 metadata:
-  name: whoami-ingress
+  name: web-ingress
   annotations:
     kubernetes.io/ingress.class: "traefik"
     traefik.ingress.kubernetes.io/frontend-entry-points: http,https
@@ -10,10 +10,10 @@ metadata:
     #traefik.ingress.kubernetes.io/redirect-permanent: "true"
 spec:
   rules:
-  - host: whoamicore.k8s.molnet.app
+  - host: netflicks.k8s.contrast.app
     http:
       paths:
       - path: /
         backend:
-          serviceName: whoami-service
-          servicePort: 80
+          serviceName: web
+          servicePort: 90
