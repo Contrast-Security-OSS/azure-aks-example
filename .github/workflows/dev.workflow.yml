@@ -44,6 +44,17 @@ jobs:
         resource-group: 'mark-aks-test'
         cluster-name: 'mark-test-2'
       id: login
+      
+    - name: Set imagePullSecret
+      uses: azure/k8s-create-secret@v1
+      with:
+        namespace: 'default'
+        container-registry-url: ${{ env.REGISTRY_NAME }}.azurecr.io
+        container-registry-username: ${{ secrets.REGISTRY_USERNAME }}
+        container-registry-password: ${{ secrets.REGISTRY_PASSWORD }}
+        secret-name: 'pull-secret'
+      id: create-secret
+
 
     - uses: Azure/k8s-deploy@v1
       with:
@@ -70,6 +81,8 @@ jobs:
           ./kubernetes/manifests/web-service.yaml
         images: |
           ${{ env.REGISTRY_NAME }}.azurecr.io/${{ env.APP_NAME }}:${{ github.sha }}
+        imagePullSecrets: |
+          pull-secret
       name: web-deploys
           
     - uses: Azure/k8s-deploy@v1
