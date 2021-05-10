@@ -2,7 +2,7 @@ name: Build and push AKS
 
 on:
   push:
-    tags:
+    branches:
      - '*'
      
 env:
@@ -63,7 +63,7 @@ jobs:
           ./kubernetes/manifests/database-deployment.yaml
           ./kubernetes/manifests/database-service.yaml
         images: |
-          mcr.microsoft.com/mssql/server:2019:latest
+          mcr.microsoft.com/mssql/server:2019-latest
       name: database-deploys
                    
     - uses: Azure/k8s-deploy@v1
