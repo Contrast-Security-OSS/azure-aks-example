@@ -11,7 +11,7 @@ env:
   APP_NAME: netflicks-dotnet
 
 jobs:
-
+  #build and deploy to aks cluster
   Build-Deploy-AKS:
 
     runs-on: ubuntu-latest
