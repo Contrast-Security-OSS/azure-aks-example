@@ -11,7 +11,8 @@ env:
   APP_NAME: netflicks-dotnet
 
 jobs:
-  build:
+
+  Build:
 
     runs-on: ubuntu-latest
     
@@ -38,6 +39,8 @@ jobs:
       name: Docker build and push image to ACR
         
   deploy:
+  
+    needs: Build
 
     runs-on: ubuntu-latest
     
