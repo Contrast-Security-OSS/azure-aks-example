@@ -12,7 +12,7 @@ env:
 
 jobs:
 
-  Build:
+  Build-Deploy-AKS:
 
     runs-on: ubuntu-latest
     
@@ -38,13 +38,6 @@ jobs:
         docker push ${{ env.REGISTRY_NAME }}.azurecr.io/${{ env.APP_NAME }}:${{ github.sha }}
       name: Docker build and push image to ACR
         
-  deploy:
-  
-    needs: Build
-
-    runs-on: ubuntu-latest
-    
-    steps: 
     - uses: azure/aks-set-context@v1
       with:
         creds: '${{ secrets.AZURE_CREDENTIALS }}' # Azure credentials
