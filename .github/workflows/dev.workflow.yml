@@ -2,7 +2,7 @@ name: Build and push AKS
 
 on:
   push:
-    tags:
+    branches:
      - '*'
      
 env:
