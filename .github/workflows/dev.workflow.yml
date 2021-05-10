@@ -20,19 +20,28 @@ jobs:
       # explicitly passing the name of this step - must be AFTER 'uses'
       name: Checkout main branch
 
-    - name: Test
+    - name: Sample-Test
       run: |
         echo $RELEASE_VERSION
         echo ${{ env.RELEASE_VERSION }}
+        
     - uses: azure/docker-login@v1
       with:
         login-server: ${{ env.REGISTRY_NAME }}.azurecr.io
         username: ${{ secrets.REGISTRY_USERNAME }}
         password: ${{ secrets.REGISTRY_PASSWORD }}
+      name: ACR login
 
     - run: |
         docker build . -t ${{ env.REGISTRY_NAME }}.azurecr.io/${{ env.APP_NAME }}:${{ github.sha }}
         docker push ${{ env.REGISTRY_NAME }}.azurecr.io/${{ env.APP_NAME }}:${{ github.sha }}
+      name: Docker build and push image to ACR
+        
+  deploy:
+
+    runs-on: ubuntu-latest
+    
+    steps: 
     - uses: azure/aks-set-context@v1
       with:
         creds: '${{ secrets.AZURE_CREDENTIALS }}' # Azure credentials
@@ -53,8 +62,9 @@ jobs:
         manifests: |
           ./kubernetes/manifests/database-deployment.yaml
           ./kubernetes/manifests/database-service.yaml
+        images: |
+          
       name: database-deploys
-        images:
                    
     - uses: Azure/k8s-deploy@v1
       with:
@@ -62,6 +72,8 @@ jobs:
         manifests: |
           ./kubernetes/manifests/web-deployment.yaml
           ./kubernetes/manifests/web-service.yaml
+        images: |
+          ${{ env.REGISTRY_NAME }}.azurecr.io/${{ env.APP_NAME }}:${{ github.sha }}
       name: web-deploys
           
     - uses: Azure/k8s-deploy@v1
