@@ -29,7 +29,7 @@ spec:
               value: "Y"
             - name: SA_PASSWORD
               value: reallyStrongPwd123
-          image: mcr.microsoft.com/mssql/server:2019-latest
+          image: mcr.microsoft.com/mssql/server
           name: database
           ports:
             - containerPort: 1433
