@@ -1,0 +1,51 @@
+{
+  "iisSettings": {
+    "windowsAuthentication": false,
+    "anonymousAuthentication": true,
+    "iisExpress": {
+      "applicationUrl": "http://localhost:5000/",
+      "sslPort": 0
+    }
+  },
+  "profiles": {
+    "IIS Express": {
+      "commandName": "IISExpress",
+      "launchBrowser": true,
+      "environmentVariables": {
+        "CORECLR_PROFILER_PATH_64": "$(TargetDir)\\contrast\\runtimes\\win-x64\\native\\ContrastProfiler.dll",
+        "ConnectionStrings__DotNetFlicksConnection": "Server=tcp:sales-engineering-db.database.windows.net,1433;Initial Catalog=DotNetFlicksDb;Persist Security Info=False;User ID=demo.person;Password=ContrastRocks123!;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;",
+        "CORECLR_ENABLE_PROFILING": "1",
+        "ConnectionStrings__DotNetFlicksConnection_localdb": "Server=(localdb)\\mssqllocaldb;Database=DotNetFlicksDb;Trusted_Connection=True;MultipleActiveResultSets=true",
+        "CORECLR_PROFILER": "{8B2CE134-0948-48CA-A4B2-80DDAD9F5791}",
+        "CORECLR_PROFILER_PATH_32": "$(TargetDir)\\contrast\\runtimes\\win-x32\\native\\ContrastProfiler.dll",
+        "CONTRAST__APPLICATION__NAME": "netflicks",
+        "CONTRAST_INSTALL_DIRECTORY": "$(TargetDir)\\contrast",
+        "CONTRAST_DATA_DIRECTORY": "C:\\ProgramData\\Contrast\\dotnet-core",
+        "ASPNETCORE_ENVIRONMENT": "Development",
+        "CONTRAST_CONFIG_PATH": "C:\\ProgramData\\Contrast\\contrast_security.yaml"
+      }
+    },
+    "Azure Dev Spaces": {
+      "commandName": "AzureDevSpaces",
+      "launchBrowser": true
+    },
+    "DotNetflicks": {
+      "commandName": "Project",
+      "launchBrowser": true,
+      "launchUrl": "http://localhost:5000",
+      "environmentVariables": {
+        "CORECLR_PROFILER_PATH_64": "C:\\Users\\demo.person\\source\\repos\\Netflicks\\DotNetFlicks.Web\\bin\\Debug\\netcoreapp2.1\\contrast\\runtimes\\win-x64\\native\\ContrastProfiler.dll",
+        "ConnectionStrings__DotNetFlicksConnection": "Server=tcp:sales-engineering-db.database.windows.net,1433;Initial Catalog=DotNetFlicksDb;Persist Security Info=False;User ID=demo.person;Password=ContrastRocks123!;MultipleActiveResultSets=False;Encrypt=True;TrustServerCertificate=False;Connection Timeout=30;",
+        "CORECLR_ENABLE_PROFILING": "1",
+        "CORECLR_PROFILER": "{8B2CE134-0948-48CA-A4B2-80DDAD9F5791}",
+        "CORECLR_PROFILER_PATH_32": "C:\\Users\\demo.person\\source\\repos\\Netflicks\\DotNetFlicks.Web\\bin\\Debug\\netcoreapp2.1\\contrast\\runtimes\\win-x32\\native\\ContrastProfiler.dll",
+        "CONTRAST__APPLICATION__NAME": "netflicks",
+        "CONTRAST_INSTALL_DIRECTORY": "C:\\Users\\demo.person\\source\\repos\\Netflicks\\DotNetFlicks.Web\\bin\\Debug\\netcoreapp2.1\\contrast",
+        "CONTRAST_DATA_DIRECTORY": "C:\\ProgramData\\Contrast\\dotnet-core",
+        "ASPNETCORE_ENVIRONMENT": "Developer",
+        "CONTRAST_CONFIG_PATH": "C:\\ProgramData\\Contrast\\dotnet\\contrast_security.yaml"
+      },
+      "applicationUrl": "http://localhost:5000"
+    }
+  }
+}

@@ -1,0 +1,105 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: database
+  labels:
+    name: database
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      name: database
+  template:
+    metadata:
+      labels:
+        name: database
+    spec:
+      containers:
+        - env:
+            - name: ACCEPT_EULA
+              value: "Y"
+            - name: SA_PASSWORD
+              value: reallyStrongPwd123
+          image: mcr.microsoft.com/mssql/server:2019-latest
+          name: database
+          ports:
+            - containerPort: 1433
+      restartPolicy: Always
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: database
+  labels:
+    name: database
+  name: database
+spec:
+  ports:
+    - name: db-port
+      port: 1433
+      targetPort: 1433
+  selector:
+    name: database
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: web-claim0
+  labels:
+    name: web-claim0
+spec:
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 100Mi
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: web
+  labels:
+    name: web
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      name: web
+  strategy:
+    type: Recreate
+  template:
+    metadata:
+      labels:
+        name: web
+    spec:
+      containers:
+        - env:
+            - name: ConnectionStrings__DotNetFlicksConnection
+              value: Server=tcp:database,1433;Initial Catalog=DotNetFlicksDb;Persist Security Info=False;User ID=sa;Password=reallyStrongPwd123;MultipleActiveResultSets=False;
+          image: netflicks:1
+          name: web
+          ports:
+            - containerPort: 80
+          volumeMounts:
+            - mountPath: /opt/contrast/
+              name: web-claim0
+      restartPolicy: Always
+      volumes:
+        - name: web-claim0
+          persistentVolumeClaim:
+            claimName: web-claim0
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: web
+  labels:
+    name: web
+spec:
+  type: NodePort
+  ports:
+  - port: 80
+    targetPort: 80
+    nodePort: 30001
+  selector:
+    name: web

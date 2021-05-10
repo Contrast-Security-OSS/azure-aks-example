@@ -1,0 +1,4 @@
+{
+    "appService.defaultWebAppToDeploy": "/subscriptions/4352f0e7-67db-4001-8352-25147175ee02/resourceGroups/sales-engineering-demo/providers/Microsoft.Web/sites/netflicks",
+    "appService.deploySubpath": "DotNetFlicks.Web"
+}
