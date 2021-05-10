@@ -50,5 +50,3 @@ jobs:
           ./kubernetes/manifests/web-service.yaml
           ./kubernetes/manifests/database-service.yaml
           ./kubernetes/manifests/ingress.yaml
-        images: |
-          index.docker.io/${{ env.REGISTRY_NAME }}/${{ env.APP_NAME }}:${{ env.RELEASE_VERSION }}
