@@ -2,7 +2,7 @@ name: Build and push AKS
 
 on:
   push:
-    branches:
+    tags:
      - '*'
      
 env:
@@ -44,11 +44,11 @@ jobs:
       with:
         namespace: default
         manifests: |
-          ./kubernetes/manifests/ingress.yaml
+          ./kubernetes/manifests/volume-claim.yaml
           ./kubernetes/manifests/web-deployment.yaml
           ./kubernetes/manifests/database-deployment.yaml
           ./kubernetes/manifests/web-service.yaml
           ./kubernetes/manifests/database-service.yaml
-          ./kubernetes/manifests/volume-claim.yaml
+          ./kubernetes/manifests/ingress.yaml
         images: |
           index.docker.io/${{ env.REGISTRY_NAME }}/${{ env.APP_NAME }}:${{ env.RELEASE_VERSION }}
