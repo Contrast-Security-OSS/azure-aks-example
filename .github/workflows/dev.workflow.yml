@@ -2,7 +2,7 @@ name: Build and push AKS
 
 on:
   push:
-    branches:
+    tags:
      - '*'
      
 env:
@@ -45,8 +45,28 @@ jobs:
         namespace: default
         manifests: |
           ./kubernetes/manifests/volume-claim.yaml
-          ./kubernetes/manifests/web-deployment.yaml
+      name: volume-claim-deploy
+    
+    - uses: Azure/k8s-deploy@v1
+      with:
+        namespace: default
+        manifests: |
           ./kubernetes/manifests/database-deployment.yaml
-          ./kubernetes/manifests/web-service.yaml
           ./kubernetes/manifests/database-service.yaml
+      name: database-deploys
+        images:
+                   
+    - uses: Azure/k8s-deploy@v1
+      with:
+        namespace: default
+        manifests: |
+          ./kubernetes/manifests/web-deployment.yaml
+          ./kubernetes/manifests/web-service.yaml
+      name: web-deploys
+          
+    - uses: Azure/k8s-deploy@v1
+      with:
+        namespace: default
+        manifests: |
           ./kubernetes/manifests/ingress.yaml
+      name: ingress-deploy
