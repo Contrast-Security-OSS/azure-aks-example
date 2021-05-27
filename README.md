@@ -55,6 +55,14 @@ You can run netflicks within a Kubernetes cluster, tested on local OSX via Kuber
 
 ### Create a kubernetes secret to store Contrast Agent configurations
 
+1.) Update the 'contrast_security.yaml' with your configuration details.
+
+2.) Create a kubernetes secret that houses the Contrast Security agent configuration from the 'contrast_security' file:
+
+`kubectl create secret generic contrast-security --from-file=./contrast_security.yaml`
+
+_*You need to be in the same directory that contains the 'contrast_security.yaml' file, unless you explicitly pass the file location to kubectl as above.*_
+
 ### Deploy Netflicks to an AKS cluster
 
 1.) Make sure your AKS cluster can pull images from your ACR - more information found [here](https://docs.microsoft.com/en-us/azure/aks/cluster-container-registry-integration)
