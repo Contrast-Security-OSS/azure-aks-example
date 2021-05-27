@@ -81,7 +81,7 @@ To expose a sample SQL Injection vulnerability:
 * login 
   *  inspect the loadbalancer service you have deployed to get the IP - the port, unless changed, should be 90
   *  credentials - email: admin@dotnetflicks.com, password: p@ssWORD471
-  *  go to the movies list and search for: 
+*  go to the movies list and search for: 
 
 `'); UPDATE Movies SET Name = 'Pwned' --`
 
