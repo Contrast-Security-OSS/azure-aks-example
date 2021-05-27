@@ -26,9 +26,13 @@ Following your build, in order to run the application via Microsoft AKS, you fir
 
 1.) Make sure to tag the image prior to pushing to the registry using this command:
 
+`docker tag SOURCE_IMAGE[:TAG] TARGET_IMAGE[:TAG]`
+
+2.) Log into Microsoft's ACR using the following command:
+
 ``
 
-2.) Push a local container image to Microsoft's ACR using the 'docker' command:
+3.) Push a local container image to Microsoft's ACR using the 'docker' command:
 
 ``
 
