@@ -50,6 +50,8 @@ Login and go to the movies list, search for:
 
 The database will reset each time you run the demo.
 
+![Netflicks Database Injection](/images/netflicks-Pwned.png)
+
 ## End to End tests
 
 There is a test script which you can use to reveal all the vulnerabilities which requires node and puppeteer.
