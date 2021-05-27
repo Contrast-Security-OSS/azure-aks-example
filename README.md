@@ -34,7 +34,7 @@ Following your build, in order to run the application via Microsoft AKS, you fir
 
 3.) Push a local container image to Microsoft's ACR using the 'docker' command:
 
-``
+`docker push NAME[:TAG]`
 
 ## Kubernetes Deployment
 
