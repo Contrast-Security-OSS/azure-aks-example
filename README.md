@@ -71,7 +71,7 @@ You can run netflicks within a Kubernetes cluster, tested on local OSX via Kuber
 
 3.) Run the following code to deploy using kubectl:
 
-`kubectl apply -f web-deployment.yaml,web-service.yaml,database-deployment.yaml,database-service.yaml,volume-claim.yaml`
+`kubectl apply -f web-deployment-updated.yaml,web-service.yaml,database-deployment.yaml,database-service.yaml,volume-claim.yaml`
 
 *Note - You need to be in the same directory that contains the manifests, unless you explicitly pass the file location to kubectl.*
 
