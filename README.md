@@ -1,4 +1,6 @@
-# Microsoft AKS - Contrast Security Example 
+# Microsoft AKS - Contrast Security Example
+
+![Contrast AKS Integration Example](/images/aks-blog-pic1-2.png)
 
 ## Netflicks .Net Core Demo App
 
