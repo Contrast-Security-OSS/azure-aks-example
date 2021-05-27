@@ -42,6 +42,10 @@ Following your build, in order to run the application via Microsoft AKS, you fir
 
 You can run netflicks within a Kubernetes cluster, tested on local OSX via Kubernetes cluster running on Docker Desktop and Microsoft AKS. 
 
+### Create a kubernetes secret to store Contrast Agent configurations
+
+### Deploy Netflicks to an AKS cluster
+
 1.) Make sure your AKS cluster can pull images from your ACR - more information found [here](https://docs.microsoft.com/en-us/azure/aks/cluster-container-registry-integration)
 
 2.) Find the manifests in 'kubernetes/manifests'
