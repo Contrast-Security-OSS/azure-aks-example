@@ -10,13 +10,15 @@ You can run netflicks within a Docker container, tested on OSX. It uses a separa
 
 1.) Build the container using `./image.sh`
 
-2.) Run the containers locally via Docker-Compose using `docker-compose up`
+2.) Run the containers locally via Docker-Compose using `docker build -f Dockerfile.contrast . -t netflicks:1`
 
 ## Pushing the Container Image to Microsoft ACR
 
 Following your build, in order to run the application via Microsoft AKS, you first need to have an image avialable inside a Container Registry.  This demo uses Microsoft's ACR to store the built container images. 
 
-1.) Push a local container image to Microsoft's ACR using the 'docker' command:
+1.) Make sure to tag the image prior to pushing to the registry using this command:
+
+2.) Push a local container image to Microsoft's ACR using the 'docker' command:
 
 ## Kubernetes Deployment
 
