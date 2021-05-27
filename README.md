@@ -1,6 +1,6 @@
 # Microsoft AKS - Contrast Security Example
 
-The code in this github repository integrates a Contrast Security agent with an application being deployed to a Microsoft AKS cluster.
+The code in this github repository gives a step-by-step instruction on how to integrate a Contrast Security agent with an application being deployed to a Microsoft AKS cluster.
 
 ![Contrast AKS Integration Example](/images/aks-blog-pic1-2.png)
 
