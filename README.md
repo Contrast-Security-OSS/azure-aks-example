@@ -43,9 +43,6 @@ There is a test script which you can use to reveal all the vulnerabilities which
 
 2.) Run `BASEURL=https://<your service name>.azurewebsites.net node exercise.js` or `BASEURL=https://<your service name>.azurewebsites.net DEBUG=true node exercise.js` to see it in progress.
 
-## Deploying a new version
-
-If you change the application you should run the Publish option in Visual Studio which will update the content in deploy folder. Zip this up into a file called deploy.zip. There is a VM called DockerBuilder in Azure to do this process.
 
 ## Simple exploit
 
