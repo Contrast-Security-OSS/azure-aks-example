@@ -41,7 +41,7 @@ There is a test script which you can use to reveal all the vulnerabilities which
 
 1.) From the app folder run `npm i puppeteer`.
 
-2.) Run `BASEURL=https://<your service name>.azurewebsites.net node exercise.js` or `BASEURL=https://<your service name>.azurewebsites.net DEBUG=true node exercise.js` to see it in progress.
+2.) Run `BASEURL=https://<EXPOSED_IP>:90 node exercise.js` or `BASEURL=https://<EXPOSED_IP>:90 DEBUG=true node exercise.js` to see it in progress.
 
 
 ## Simple exploit
