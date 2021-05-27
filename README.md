@@ -1,18 +1,24 @@
 # Microsoft AKS - Contrast Security Example 
 
-### Netflicks .Net Core Demo App
+## Netflicks .Net Core Demo App
 
 Based on https://github.com/LeviHassel/.net-flicks with vulnerabilities added.
 
-### Docker/Docker-Compose
+## Docker/Docker-Compose
 
 You can run netflicks within a Docker container, tested on OSX. It uses a separate sql server as specified within docker-compose.yml (you should not need to edit this file). The agent is added automatically during the Docker build process.
 
 1.) Build the container using `./image.sh`
 
-2.) Run the containers using `docker-compose up`
+2.) Run the containers locally via Docker-Compose using `docker-compose up`
 
-### Kubernetes
+## Pushing the Container Image to Microsoft ACR
+
+Following your build, in order to run the application via Microsoft AKS, you first need to have an image avialable inside a Container Registry.  This demo uses Microsoft's ACR to store the built container images. 
+
+1.) Push a local container image to Microsoft's ACR using the 'docker' command:
+
+## Kubernetes
 
 You can run netflicks within a Kubernetes cluster, tested on local OSX via Kubernetes cluster running on Docker Desktop and Microsoft AKS. 
 
