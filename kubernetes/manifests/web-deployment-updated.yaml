@@ -28,6 +28,8 @@ spec:
         - env:
             - name: ConnectionStrings__DotNetFlicksConnection
               value: Server=tcp:database,1433;Initial Catalog=DotNetFlicksDb;Persist Security Info=False;User ID=sa;Password=reallyStrongPwd123;MultipleActiveResultSets=False;
+            - name: "CONTRAST_CONFIG_PATH"
+              value: "/etc/contrast/contrast_security.yaml"
           image: marktestregistry.azurecr.io/netflicks-dotnet
           name: web
           ports:
@@ -36,9 +38,15 @@ spec:
           volumeMounts:
             - mountPath: /opt/contrast/
               name: web-claim0
+            - name: contrast-security
+              readOnly: true
+              mountPath: "/etc/contrast"
       restartPolicy: Always
       volumes:
         - name: web-claim0
           persistentVolumeClaim:
             claimName: web-claim0
+        - name: contrast-security
+          secret:
+            secretName: contrast-security
 status: {}
