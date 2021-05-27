@@ -20,6 +20,8 @@ You can run netflicks within a Docker container, tested on OSX. It uses a separa
 
 `docker-compose up`
 
+*Note - For vanilla Docker implementations including docker-compose, the agent configurations are passed via environment variables within the Dockerfile.  Make sure to use Dockerfile for vanilla Docker implementations for the docker build.  If you are deploying to Microsoft AKS, please use Dockerfile-new for the docker build as the Contrast Agent configurations are removed from the Dockerfile.  For Microsoft AKS implementations, Contrast Agent configurations are passed using kubernetes secrets/configMaps.* 
+
 ## Pushing the Container Image to Microsoft ACR
 
 Following your build, in order to run the application via Microsoft AKS, you first need to have an image avialable inside a Container Registry.  This demo uses Microsoft's ACR to store the built container images. 
