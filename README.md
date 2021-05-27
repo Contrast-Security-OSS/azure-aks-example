@@ -1,4 +1,6 @@
-# Netflicks .Net Core Demo App
+# Microsoft AKS - Contrast Security Example 
+
+### Netflicks .Net Core Demo App
 
 Based on https://github.com/LeviHassel/.net-flicks with vulnerabilities added.
 
