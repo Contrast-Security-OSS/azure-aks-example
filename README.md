@@ -48,7 +48,7 @@ You can run netflicks within a Kubernetes cluster, tested on local OSX via Kuber
 
 `kubectl apply -f web-deployment.yaml,web-service.yaml,database-deployment.yaml,database-service.yaml,volume-claim.yaml`
 
-*You need to be in the same directory that contains the manifests, unless you explicitly pass the file location to kubectl.*
+_*You need to be in the same directory that contains the manifests, unless you explicitly pass the file location to kubectl.*_
 
 ## Simple exploit (SQL Injection)
 
