@@ -14,7 +14,7 @@ You can run netflicks within a Docker container, tested on OSX. It uses a separa
 
 1.) Build the container using:
 
-`docker build -f Dockerfile.contrast . -t netflicks:1`
+`docker build -f Dockerfile . -t netflicks:1`
 
 2.) Run the containers locally via Docker-Compose using: 
 
