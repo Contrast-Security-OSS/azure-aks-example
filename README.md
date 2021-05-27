@@ -40,9 +40,11 @@ Following your build, in order to run the application via Microsoft AKS, you fir
 
 You can run netflicks within a Kubernetes cluster, tested on local OSX via Kubernetes cluster running on Docker Desktop and Microsoft AKS. 
 
-1.) Find the manifests in 'kubernetes/manifests'
+1.) Make sure your AKS cluster can pull images from your ACR - more information found [here](https://docs.microsoft.com/en-us/azure/aks/cluster-container-registry-integration)
 
-2.) Run the following code to deploy using kubectl:
+2.) Find the manifests in 'kubernetes/manifests'
+
+3.) Run the following code to deploy using kubectl (you need to be in the same directory that contains the manifests, unless you explicitly pass the file location to kubectl):
 
 `kubectl apply -f web-deployment.yaml,web-service.yaml,database-deployment.yaml,database-service.yaml,volume-claim.yaml`
 
