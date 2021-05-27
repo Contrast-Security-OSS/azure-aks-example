@@ -4,7 +4,7 @@
 
 Based on https://github.com/LeviHassel/.net-flicks with vulnerabilities added.
 
-## Docker/Docker-Compose
+## Docker Build/Docker-Compose Deployment
 
 You can run netflicks within a Docker container, tested on OSX. It uses a separate sql server as specified within docker-compose.yml (you should not need to edit this file). The agent is added automatically during the Docker build process.
 
@@ -18,7 +18,7 @@ Following your build, in order to run the application via Microsoft AKS, you fir
 
 1.) Push a local container image to Microsoft's ACR using the 'docker' command:
 
-## Kubernetes
+## Kubernetes Deployment
 
 You can run netflicks within a Kubernetes cluster, tested on local OSX via Kubernetes cluster running on Docker Desktop and Microsoft AKS. 
 
@@ -26,7 +26,7 @@ You can run netflicks within a Kubernetes cluster, tested on local OSX via Kuber
 
 2.) Run the following code to deploy using kubectl:
 
-## Simple exploit
+## Simple exploit (SQL Injection)
 
 Login and go to the movies list, search for `'); UPDATE Movies SET Name = 'Pwned' --`
 
