@@ -4,7 +4,7 @@
 
 Based on https://github.com/LeviHassel/.net-flicks with vulnerabilities added.
 
-### Docker
+### Docker/Docker-Compose
 
 You can run netflicks within a Docker container, tested on OSX. It uses a separate sql server as specified within docker-compose.yml (you should not need to edit this file). The agent is added automatically during the Docker build process.
 
@@ -12,6 +12,13 @@ You can run netflicks within a Docker container, tested on OSX. It uses a separa
 
 2.) Run the containers using `docker-compose up`
 
+### Kubernetes
+
+You can run netflicks within a Kubernetes cluster, tested on local OSX via Kubernetes cluster running on Docker Desktop and Microsoft AKS. 
+
+1.) Find the manifests in 'kubernetes/manifests'
+
+2.) Run the following code to deploy using kubectl:
 
 ## End to End tests
 
