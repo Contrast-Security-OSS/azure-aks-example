@@ -6,6 +6,8 @@
 
 Based on https://github.com/LeviHassel/.net-flicks with vulnerabilities added.
 
+![Netflicks Example Application](/images/netflicks-landing.png)
+
 ## Docker Build/Docker-Compose Deployment
 
 You can run netflicks within a Docker container, tested on OSX. It uses a separate sql server as specified within docker-compose.yml (you should not need to edit this file). The agent is added automatically during the Docker build process.
