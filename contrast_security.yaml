@@ -1,5 +1,5 @@
 api: 
-  url: https://eval.contrastsecurity.com/Contrast
-  api_key: DOeAUIavVy5NmqNA11bnuKemAq946yn7
-  service_key: K7E3Y5QDM6MUMVUB
-  user_name: agent_a8cd7a84-5cc2-4df6-b5d9-c016cc2c6f53@Marktomczaorg
+  url: <CONTRAST TEAM SERVER URL>
+  api_key: <API KEY>
+  service_key: <SERVICE KEY>
+  user_name: <CONTRAST TEAM SERVER USERNAME>
