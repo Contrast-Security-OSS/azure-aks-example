@@ -1,5 +1,7 @@
 # Microsoft AKS - Contrast Security Example
 
+The code in this github repository integrates a Contrast Security agent with an application being deployed to a Microsoft AKS cluster.
+
 ![Contrast AKS Integration Example](/images/aks-blog-pic1-2.png)
 
 This github repository contains the following sections:
@@ -10,8 +12,6 @@ This github repository contains the following sections:
 * Simple Exploit (SQL Injection)
 * Contrast Security Vulnerability Results
 * End-to-End Tests
-
-The code in this github repository integrates a Contrast Security agent with an application being deployed to a Microsoft AKS cluster.
 
 ## Sample Application - Netflicks .Net Core
 
