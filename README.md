@@ -69,13 +69,15 @@ _*You need to be in the same directory that contains the manifests, unless you e
 
 ## Simple exploit (SQL Injection)
 
-Login and go to the movies list, search for: 
+To expose a sample SQL Injection vulnerability, login and go to the movies list, search for: 
 
 `'); UPDATE Movies SET Name = 'Pwned' --`
 
-The database will reset each time you run the demo.
+Once the search functionality is exploited, the following results should come back from the database.
 
 ![Netflicks Database Injection](/images/neflicks-Pwned.png)
+
+*Note - The database will reset each time you redeploy the application because the database is being hosted inside a container.*
 
 ## Contrast Security Vulnerability Results
 
