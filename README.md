@@ -83,6 +83,8 @@ Results from the Contrast Agent should resemble the following:
 
 ![Netflicks Vulnerabilities](/images/netlicks-vulnerabilities.png)
 
+More information on Contrast Security can be found [here](www.contrastsecurity.com)
+
 ## End-to-End tests
 
 There is a test script which you can use to reveal all the vulnerabilities which requires node and puppeteer.
