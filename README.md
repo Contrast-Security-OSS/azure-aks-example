@@ -52,6 +52,12 @@ The database will reset each time you run the demo.
 
 ![Netflicks Database Injection](/images/neflicks-Pwned.png)
 
+## Contrast Security Vulnerability Results
+
+Results from the Contrast Agent should resemble the following: 
+
+![Netflicks Vulnerabilities](/images/netflicks-vulnerabilities.png)
+
 ## End to End tests
 
 There is a test script which you can use to reveal all the vulnerabilities which requires node and puppeteer.
