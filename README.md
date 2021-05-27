@@ -61,7 +61,7 @@ You can run netflicks within a Kubernetes cluster, tested on local OSX via Kuber
 
 `kubectl create secret generic contrast-security --from-file=./contrast_security.yaml`
 
-_*You need to be in the same directory that contains the 'contrast_security.yaml' file, unless you explicitly pass the file location to kubectl as above.*_
+*Note - You need to be in the same directory that contains the 'contrast_security.yaml' file, unless you explicitly pass the file location to kubectl as above.*
 
 ### Deploy Netflicks to an AKS cluster
 
@@ -73,7 +73,7 @@ _*You need to be in the same directory that contains the 'contrast_security.yaml
 
 `kubectl apply -f web-deployment.yaml,web-service.yaml,database-deployment.yaml,database-service.yaml,volume-claim.yaml`
 
-_*You need to be in the same directory that contains the manifests, unless you explicitly pass the file location to kubectl.*_
+*Note - You need to be in the same directory that contains the manifests, unless you explicitly pass the file location to kubectl.*
 
 ## Simple exploit (SQL Injection)
 
@@ -97,7 +97,7 @@ Results from the Contrast Agent should resemble the following:
 
 ![Netflicks Vulnerabilities](/images/netlicks-vulnerabilities.png)
 
-More information on Contrast Security can be found [here](www.contrastsecurity.com)
+*Note - More information on Contrast Security can be found [here](www.contrastsecurity.com)*
 
 ## End-to-End tests
 
