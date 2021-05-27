@@ -2,6 +2,17 @@
 
 ![Contrast AKS Integration Example](/images/aks-blog-pic1-2.png)
 
+This github repository contains the following sections:
+* Sample Application - Netflicks .Net Core
+* Docker Build/Docker-Compose Deployment
+* Pushing the Container Image to Microsoft ACR
+* Kubernetes Deployment
+* Simple Exploit (SQL Injection)
+* Contrast Security Vulnerability Results
+* End-to-End Tests
+
+The code in this github repository integrates a Contrast Security agent with an application being deployed to a Microsoft AKS cluster.
+
 ## Sample Application - Netflicks .Net Core
 
 Based on https://github.com/LeviHassel/.net-flicks with vulnerabilities added.
@@ -72,7 +83,7 @@ Results from the Contrast Agent should resemble the following:
 
 ![Netflicks Vulnerabilities](/images/netlicks-vulnerabilities.png)
 
-## End to End tests
+## End-to-End tests
 
 There is a test script which you can use to reveal all the vulnerabilities which requires node and puppeteer.
 
