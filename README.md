@@ -28,7 +28,7 @@ Following your build, in order to run the application via Microsoft AKS, you fir
 
 `docker tag SOURCE_IMAGE[:TAG] TARGET_IMAGE[:TAG]`
 
-2.) Log into Microsoft's ACR using the following command:
+2.) Log into Microsoft's ACR using the following command - more information found [here](https://docs.microsoft.com/en-us/azure/container-registry/container-registry-get-started-docker-cli?tabs=azure-cli):
 
 `docker login <myregistry>.azurecr.io`
 
