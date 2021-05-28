@@ -15,9 +15,9 @@ This github repository contains the following sections:
 
 ## Sample Application - Netflicks .Net Core
 
-Based on https://github.com/LeviHassel/.net-flicks with vulnerabilities added.
+The sample application is based on https://github.com/LeviHassel/.net-flicks - vulnerabilities have been added for demonstration purposes.
 
-The application was developed on Microsoft's .NET Core framework.  This guide assumes that the user has knowledge on how to instrument a .Net Core application with a Contrast Security Agent.  For more information on how to instrument a .NET Core application with a Contrast Security Agent, please visit the link [here](https://docs.contrastsecurity.com/en/-net-core.html).
+The Netflicks application was developed on Microsoft's .NET Core framework.  This guide assumes that the user has knowledge on how to instrument a .Net Core application with a Contrast Security Agent.  For more information on how to instrument a .NET Core application with a Contrast Security Agent, please visit the link [here](https://docs.contrastsecurity.com/en/-net-core.html).
 
 ![Netflicks Example Application](/images/netflicks-landing.png)
 
