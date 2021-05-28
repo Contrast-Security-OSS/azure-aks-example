@@ -25,7 +25,7 @@ For more information on how to instrument a .NET Core application with a Contras
 
 ## Docker Build/Docker-Compose Deployment
 
-You can run netflicks within a Docker container, tested on OSX. It uses a separate sql server as specified within docker-compose.yml (you should not need to edit this file). The agent is added automatically during the Docker build process.
+You can run netflicks within a Docker container locally via docker-compose as tested on OSX. It uses a separate sql server as specified within docker-compose.yml (you should not need to edit this file). The agent is added automatically during the Docker build process.
 
 1.) Build the container using:
 
@@ -55,7 +55,7 @@ Following your build, in order to run the application via Microsoft AKS, you fir
 
 ## Kubernetes Deployment
 
-You can run netflicks within a Kubernetes cluster, tested on local OSX via Kubernetes cluster running on Docker Desktop and Microsoft AKS. 
+The Netflicks application can also be deployed to a Kubernetes cluster as tested on local OSX via Kubernetes running locally on Docker Desktop and the Microsoft AKS PaaS environment. 
 
 ### Create a kubernetes secret to store Contrast Agent configurations
 
