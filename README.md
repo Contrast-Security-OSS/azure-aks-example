@@ -5,7 +5,7 @@ The code in this github repository gives a step-by-step instruction on how to in
 ![Contrast AKS Integration Example](/images/aks-blog-pic1-2.png)
 
 This github repository contains the following sections:
-* Sample Application - Netflicks .Net Core
+* Sample Application with Vulnerabilities - Netflicks
 * Docker Build/Docker-Compose Deployment
 * Pushing the Container Image to Microsoft ACR
 * Kubernetes Deployment
@@ -13,7 +13,7 @@ This github repository contains the following sections:
 * Contrast Security Vulnerability Results
 * End-to-End Tests
 
-## Sample Application - Netflicks .Net Core
+## Sample Application with Vulnerabilities - Netflicks
 
 The sample application is based on https://github.com/LeviHassel/.net-flicks - vulnerabilities have been added for demonstration purposes.
 
