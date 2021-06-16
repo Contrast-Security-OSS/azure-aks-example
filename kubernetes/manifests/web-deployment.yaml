@@ -28,7 +28,7 @@ spec:
         - env:
             - name: ConnectionStrings__DotNetFlicksConnection
               value: Server=tcp:database,1433;Initial Catalog=DotNetFlicksDb;Persist Security Info=False;User ID=sa;Password=reallyStrongPwd123;MultipleActiveResultSets=False;
-          image: marktestregistry.azurecr.io/netflicks-dotnet
+          image: <REGISTRY NAME>.azurecr.io/netflicks-dotnet
           name: web
           ports:
             - containerPort: 80
