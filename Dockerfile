@@ -1,4 +1,4 @@
-FROM mcr.microsoft.com/dotnet/core/sdk:2.2 AS publish
+FROM mcr.microsoft.com/dotnet/core/sdk:2.2@sha256:42699bba2fe4545dd753694499e6db08478ba5b3bcc34b929e7e324d4c115449 AS publish
 WORKDIR /src
 COPY ./DotNetFlicks.Accessors ./DotNetFlicks.Accessors
 COPY ./DotNetFlicks.Common ./DotNetFlicks.Common
@@ -14,7 +14,7 @@ RUN dotnet add  "DotNetFlicks.Web/Web.csproj" package Contrast.SensorsNetCore --
 #Compile the app
 RUN dotnet publish "DotNetFlicks.Web/Web.csproj" /p:Platform=x64 -c Release -o /app
 
-FROM mcr.microsoft.com/dotnet/core/aspnet:2.2 AS final
+FROM mcr.microsoft.com/dotnet/core/aspnet:2.2@sha256:08277d629af9d5324b63420a650cd96f86e73c4cfdcef6ea3c45912e7578956d AS final
 RUN uname -a
 RUN apt-get update && apt-get --assume-yes install libnss3-tools
 WORKDIR /app
